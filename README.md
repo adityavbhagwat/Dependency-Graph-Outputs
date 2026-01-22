@@ -94,10 +94,4 @@ From the coverage analysis:
 - **Average quality score: 72.3/100**
 - All graphs are valid DAGs (Directed Acyclic Graphs)
 
-## License
 
-These outputs are generated from publicly available OpenAPI specifications for research and testing purposes.
-
-## Related
-
-- Source code: [Dependency-Graph-Builder](https://github.com/aditya15intern/Dependency-Graph-Builder)
