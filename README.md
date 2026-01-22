@@ -1,6 +1,6 @@
 # Dependency Graph Builder - Generated Outputs
 
-This repository contains pre-generated dependency graphs for various OpenAPI specifications, created by the [Dependency Graph Builder](.) tool.
+This repository contains pre-generated dependency graphs for various OpenAPI specifications, created by the Dependency Graph Builder tool.
 
 ## Purpose
 
