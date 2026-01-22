@@ -1,0 +1,806 @@
+{
+  "nodes": [
+    {
+      "id": "updatePet",
+      "path": "/pet",
+      "method": "PUT",
+      "resource_type": "pet",
+      "consumes": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "addPet",
+      "path": "/pet",
+      "method": "POST",
+      "resource_type": "pet",
+      "consumes": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "findPetsByStatus",
+      "path": "/pet/findByStatus",
+      "method": "GET",
+      "resource_type": "findByStatus",
+      "consumes": [
+        "status"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "findPetsByTags",
+      "path": "/pet/findByTags",
+      "method": "GET",
+      "resource_type": "findByTags",
+      "consumes": [
+        "tags"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "getPetById",
+      "path": "/pet/{petId}",
+      "method": "GET",
+      "resource_type": "pet",
+      "consumes": [
+        "petId"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "updatePetWithForm",
+      "path": "/pet/{petId}",
+      "method": "POST",
+      "resource_type": "pet",
+      "consumes": [
+        "status",
+        "name",
+        "petId"
+      ],
+      "produces": [
+        "status",
+        "id",
+        "name",
+        "category",
+        "tags",
+        "photoUrls"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "deletePet",
+      "path": "/pet/{petId}",
+      "method": "DELETE",
+      "resource_type": "pet",
+      "consumes": [
+        "api_key",
+        "petId"
+      ],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "uploadFile",
+      "path": "/pet/{petId}/uploadImage",
+      "method": "POST",
+      "resource_type": "pet",
+      "consumes": [
+        "additionalMetadata",
+        "petId"
+      ],
+      "produces": [
+        "message",
+        "type",
+        "code"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "getInventory",
+      "path": "/store/inventory",
+      "method": "GET",
+      "resource_type": "inventory",
+      "consumes": [],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "placeOrder",
+      "path": "/store/order",
+      "method": "POST",
+      "resource_type": "order",
+      "consumes": [
+        "status",
+        "petId",
+        "shipDate",
+        "id",
+        "quantity",
+        "complete"
+      ],
+      "produces": [
+        "status",
+        "petId",
+        "shipDate",
+        "id",
+        "quantity",
+        "complete"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "getOrderById",
+      "path": "/store/order/{orderId}",
+      "method": "GET",
+      "resource_type": "order",
+      "consumes": [
+        "orderId"
+      ],
+      "produces": [
+        "status",
+        "petId",
+        "shipDate",
+        "id",
+        "quantity",
+        "complete"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "deleteOrder",
+      "path": "/store/order/{orderId}",
+      "method": "DELETE",
+      "resource_type": "order",
+      "consumes": [
+        "orderId"
+      ],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "createUser",
+      "path": "/user",
+      "method": "POST",
+      "resource_type": "user",
+      "consumes": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "produces": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "createUsersWithListInput",
+      "path": "/user/createWithList",
+      "method": "POST",
+      "resource_type": "createWithList",
+      "consumes": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "produces": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "loginUser",
+      "path": "/user/login",
+      "method": "GET",
+      "resource_type": "login",
+      "consumes": [
+        "password",
+        "username"
+      ],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {}
+    },
+    {
+      "id": "logoutUser",
+      "path": "/user/logout",
+      "method": "GET",
+      "resource_type": "logout",
+      "consumes": [],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {
+        "term_operations": true
+      }
+    },
+    {
+      "id": "getUserByName",
+      "path": "/user/{username}",
+      "method": "GET",
+      "resource_type": "user",
+      "consumes": [
+        "username"
+      ],
+      "produces": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "updateUser",
+      "path": "/user/{username}",
+      "method": "PUT",
+      "resource_type": "user",
+      "consumes": [
+        "lastName",
+        "phone",
+        "id",
+        "firstName",
+        "email",
+        "userStatus",
+        "password",
+        "username"
+      ],
+      "produces": [],
+      "is_interesting": true,
+      "annotations": {}
+    },
+    {
+      "id": "deleteUser",
+      "path": "/user/{username}",
+      "method": "DELETE",
+      "resource_type": "user",
+      "consumes": [
+        "username"
+      ],
+      "produces": [],
+      "is_interesting": false,
+      "annotations": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "addPet",
+      "target": "updatePet",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "photoUrls": "photoUrls",
+        "tags": "tags",
+        "category": "category",
+        "name": "name",
+        "id": "id",
+        "status": "status"
+      },
+      "reason": "CRUD: Must create pet before updating; Parameter 'category' produced by addPet and consumed by updatePet; Parameter 'id' produced by addPet and consumed by updatePet; Parameter 'name' produced by addPet and consumed by updatePet; Parameter 'photoUrls' produced by addPet and consumed by updatePet; Parameter 'status' produced by addPet and consumed by updatePet; Parameter 'tags' produced by addPet and consumed by updatePet",
+      "verified": null
+    },
+    {
+      "source": "getPetById",
+      "target": "updatePet",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "photoUrls": "photoUrls",
+        "tags": "tags",
+        "category": "category",
+        "name": "name",
+        "id": "id",
+        "status": "status"
+      },
+      "reason": "CRUD: Often read pet before updating; Parameter 'category' produced by getPetById and consumed by updatePet; Parameter 'id' produced by getPetById and consumed by updatePet; Parameter 'name' produced by getPetById and consumed by updatePet; Parameter 'photoUrls' produced by getPetById and consumed by updatePet; Parameter 'status' produced by getPetById and consumed by updatePet; Parameter 'tags' produced by getPetById and consumed by updatePet",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "updateUser",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "username": "username",
+        "password": "password",
+        "userStatus": "userStatus",
+        "email": "email",
+        "firstName": "firstName",
+        "id": "id",
+        "phone": "phone",
+        "lastName": "lastName"
+      },
+      "reason": "/user/{username} is nested under /user; CRUD: Must create user before updating; Parameter 'email' produced by createUser and consumed by updateUser; Parameter 'firstName' produced by createUser and consumed by updateUser; Parameter 'id' produced by createUser and consumed by updateUser; Parameter 'lastName' produced by createUser and consumed by updateUser; Parameter 'password' produced by createUser and consumed by updateUser; Parameter 'phone' produced by createUser and consumed by updateUser; Parameter 'userStatus' produced by createUser and consumed by updateUser; Parameter 'username' produced by createUser and consumed by updateUser",
+      "verified": null
+    },
+    {
+      "source": "getUserByName",
+      "target": "updateUser",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "username": "username",
+        "password": "password",
+        "userStatus": "userStatus",
+        "email": "email",
+        "firstName": "firstName",
+        "id": "id",
+        "phone": "phone",
+        "lastName": "lastName"
+      },
+      "reason": "CRUD: Often read user before updating; Parameter 'email' produced by getUserByName and consumed by updateUser; Parameter 'firstName' produced by getUserByName and consumed by updateUser; Parameter 'id' produced by getUserByName and consumed by updateUser; Parameter 'lastName' produced by getUserByName and consumed by updateUser; Parameter 'password' produced by getUserByName and consumed by updateUser; Parameter 'phone' produced by getUserByName and consumed by updateUser; Parameter 'userStatus' produced by getUserByName and consumed by updateUser; Parameter 'username' produced by getUserByName and consumed by updateUser",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "getUserByName",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "username": "username"
+      },
+      "reason": "/user/{username} is nested under /user; CRUD: Must create user before reading; Parameter 'username' produced by createUser and consumed by getUserByName",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "deleteUser",
+      "type": "crud",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "username": "username"
+      },
+      "reason": "/user/{username} is nested under /user; CRUD: Must create user before deleting; Parameter 'username' produced by createUser and consumed by deleteUser",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "updatePetWithForm",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {
+        "name": "name",
+        "status": "status"
+      },
+      "reason": "/pet/{petId} is nested under /pet; CRUD: Must create pet before updating; Parameter 'name' produced by addPet and consumed by updatePetWithForm; Parameter 'status' produced by addPet and consumed by updatePetWithForm",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "getPetById",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {},
+      "reason": "/pet/{petId} is nested under /pet; CRUD: Must create pet before reading",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "uploadFile",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {},
+      "reason": "/pet/{petId}/uploadImage is nested under /pet; CRUD: Must create pet before updating",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "deletePet",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {},
+      "reason": "/pet/{petId} is nested under /pet; CRUD: Must create pet before deleting",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "getOrderById",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {},
+      "reason": "/store/order/{orderId} is nested under /store/order; CRUD: Must create order before reading",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "deleteOrder",
+      "type": "crud",
+      "confidence": 0.9,
+      "parameter_mapping": {},
+      "reason": "/store/order/{orderId} is nested under /store/order; CRUD: Must create order before deleting",
+      "verified": null
+    },
+    {
+      "source": "getPetById",
+      "target": "updatePetWithForm",
+      "type": "crud",
+      "confidence": 0.6,
+      "parameter_mapping": {},
+      "reason": "CRUD: Often read pet before updating",
+      "verified": null
+    },
+    {
+      "source": "getPetById",
+      "target": "uploadFile",
+      "type": "crud",
+      "confidence": 0.6,
+      "parameter_mapping": {},
+      "reason": "CRUD: Often read pet before updating",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "updatePet",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "updatePet requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "addPet",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "addPet requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "findPetsByStatus",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "findPetsByStatus requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "findPetsByTags",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "findPetsByTags requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "getPetById",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "getPetById requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "updatePetWithForm",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "updatePetWithForm requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "deletePet",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "deletePet requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "uploadFile",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "uploadFile requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "getInventory",
+      "type": "authentication",
+      "confidence": 0.95,
+      "parameter_mapping": {},
+      "reason": "getInventory requires authentication",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "deleteOrder",
+      "type": "authentication",
+      "confidence": 0.7,
+      "parameter_mapping": {},
+      "reason": "deleteOrder likely requires authentication (heuristic)",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "updateUser",
+      "type": "authentication",
+      "confidence": 0.7,
+      "parameter_mapping": {},
+      "reason": "updateUser likely requires authentication (heuristic)",
+      "verified": null
+    },
+    {
+      "source": "loginUser",
+      "target": "deleteUser",
+      "type": "authentication",
+      "confidence": 0.7,
+      "parameter_mapping": {},
+      "reason": "deleteUser likely requires authentication (heuristic)",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "findPetsByStatus",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/pet/findByStatus is nested under /pet",
+      "verified": null
+    },
+    {
+      "source": "addPet",
+      "target": "findPetsByTags",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/pet/findByTags is nested under /pet",
+      "verified": null
+    },
+    {
+      "source": "updatePetWithForm",
+      "target": "uploadFile",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/pet/{petId}/uploadImage is nested under /pet/{petId}",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "createUsersWithListInput",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/user/createWithList is nested under /user",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "loginUser",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/user/login is nested under /user",
+      "verified": null
+    },
+    {
+      "source": "createUser",
+      "target": "logoutUser",
+      "type": "nested_resource",
+      "confidence": 0.85,
+      "parameter_mapping": {},
+      "reason": "/user/logout is nested under /user",
+      "verified": null
+    },
+    {
+      "source": "updatePetWithForm",
+      "target": "updatePet",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "photoUrls": "photoUrls",
+        "tags": "tags",
+        "category": "category",
+        "name": "name",
+        "id": "id",
+        "status": "status"
+      },
+      "reason": "Parameter 'category' produced by updatePetWithForm and consumed by updatePet; Parameter 'id' produced by updatePetWithForm and consumed by updatePet; Parameter 'name' produced by updatePetWithForm and consumed by updatePet; Parameter 'photoUrls' produced by updatePetWithForm and consumed by updatePet; Parameter 'status' produced by updatePetWithForm and consumed by updatePet; Parameter 'tags' produced by updatePetWithForm and consumed by updatePet",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "getPetById",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by placeOrder and consumed by getPetById",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "updatePetWithForm",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by placeOrder and consumed by updatePetWithForm",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "deletePet",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by placeOrder and consumed by deletePet",
+      "verified": null
+    },
+    {
+      "source": "placeOrder",
+      "target": "uploadFile",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by placeOrder and consumed by uploadFile",
+      "verified": null
+    },
+    {
+      "source": "getOrderById",
+      "target": "getPetById",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by getOrderById and consumed by getPetById",
+      "verified": null
+    },
+    {
+      "source": "getOrderById",
+      "target": "updatePetWithForm",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by getOrderById and consumed by updatePetWithForm",
+      "verified": null
+    },
+    {
+      "source": "getOrderById",
+      "target": "deletePet",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by getOrderById and consumed by deletePet",
+      "verified": null
+    },
+    {
+      "source": "getOrderById",
+      "target": "uploadFile",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "petId": "petId"
+      },
+      "reason": "Parameter 'petId' produced by getOrderById and consumed by uploadFile",
+      "verified": null
+    },
+    {
+      "source": "getUserByName",
+      "target": "deleteUser",
+      "type": "parameter_data",
+      "confidence": 1.0,
+      "parameter_mapping": {
+        "username": "username"
+      },
+      "reason": "Parameter 'username' produced by getUserByName and consumed by deleteUser",
+      "verified": null
+    }
+  ],
+  "metadata": {
+    "num_operations": 19,
+    "num_dependencies": 42
+  }
+}

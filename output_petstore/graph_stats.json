@@ -1,0 +1,160 @@
+{
+  "basic": {
+    "num_nodes": 19,
+    "num_edges": 22,
+    "is_dag": true,
+    "directed": true
+  },
+  "components": {
+    "count": 1,
+    "largest_size": 19
+  },
+  "degree": {
+    "in": {
+      "min": 0,
+      "max": 2,
+      "mean": 1.1578947368421053,
+      "median": 1.0,
+      "stdev": 0.5860804592452654
+    },
+    "out": {
+      "min": 0,
+      "max": 5,
+      "mean": 1.1578947368421053,
+      "median": 0.0,
+      "stdev": 1.598129100072524
+    }
+  },
+  "longest_path": {
+    "length": 5,
+    "example": [
+      "createUser",
+      "loginUser",
+      "addPet",
+      "getPetById",
+      "updatePetWithForm",
+      "updatePet"
+    ]
+  },
+  "_timings": {
+    "longest_path_sec": 0.00019097328186035156,
+    "betweenness_sec": 0.0001010894775390625,
+    "degree_centrality_sec": 9.059906005859375e-06,
+    "pickle_serialize_sec": 3.600120544433594e-05,
+    "total_sec": 0.0005841255187988281
+  },
+  "centrality": {
+    "betweenness_top": [
+      [
+        "getPetById",
+        0.049019607843137254
+      ],
+      [
+        "addPet",
+        0.04575163398692811
+      ],
+      [
+        "updatePetWithForm",
+        0.0392156862745098
+      ],
+      [
+        "loginUser",
+        0.03594771241830066
+      ],
+      [
+        "getOrderById",
+        0.016339869281045753
+      ],
+      [
+        "getUserByName",
+        0.0032679738562091504
+      ],
+      [
+        "updatePet",
+        0.0
+      ],
+      [
+        "findPetsByStatus",
+        0.0
+      ],
+      [
+        "findPetsByTags",
+        0.0
+      ],
+      [
+        "deletePet",
+        0.0
+      ]
+    ],
+    "degree_top": [
+      [
+        "loginUser",
+        0.3333333333333333
+      ],
+      [
+        "addPet",
+        0.2777777777777778
+      ],
+      [
+        "createUser",
+        0.2222222222222222
+      ],
+      [
+        "getPetById",
+        0.16666666666666666
+      ],
+      [
+        "updatePetWithForm",
+        0.16666666666666666
+      ],
+      [
+        "getOrderById",
+        0.16666666666666666
+      ],
+      [
+        "getUserByName",
+        0.16666666666666666
+      ],
+      [
+        "deletePet",
+        0.1111111111111111
+      ],
+      [
+        "placeOrder",
+        0.1111111111111111
+      ],
+      [
+        "deleteOrder",
+        0.1111111111111111
+      ]
+    ]
+  },
+  "detailed_size_in_memory": {
+    "nodes": {
+      "count": 19,
+      "total_bytes": 2591,
+      "avg_bytes_per_node": 136,
+      "avg_node_id_bytes": 72,
+      "avg_fields_per_node": 0.0
+    },
+    "edges": {
+      "count": 22,
+      "total_bytes": 4514,
+      "avg_bytes_per_edge": 205,
+      "avg_fields_per_edge": 0.0
+    },
+    "overhead": {
+      "per_node_bytes": 96,
+      "per_edge_bytes": 40,
+      "total_overhead_bytes": 2704
+    },
+    "total_estimated_bytes": 9809,
+    "human_readable": "9.58KB"
+  },
+  "serialization": {
+    "pickle_bytes": 1239
+  },
+  "extras": {
+    "density": 0.06432748538011696
+  }
+}
